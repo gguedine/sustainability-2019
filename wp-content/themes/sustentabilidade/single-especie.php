@@ -15,7 +15,7 @@
 
 
 <button id="doacao">FAZER DOACAO</button>
-<form id="form_doacao">
+<form  style="display:none" id="form_doacao">
 	<label for="valor_doacao">Valor</label>
 	<input type="number" name="doacao">
 </form>
