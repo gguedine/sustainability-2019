@@ -11,6 +11,14 @@
 <?php the_content(); ?>
 
 <a href="<?php print get_post_type_archive_link(get_post_type()) ?>">Voltar para especies</a>
+<div>Já foram doados R$<?php the_field('total_doado'); ?> para <?php the_title(); ?> até agora</div>
+
+
+<button id="doacao">FAZER DOACAO</button>
+<form id="form_doacao">
+	<label for="valor_doacao">Valor</label>
+	<input type="number" name="doacao">
+</form>
 
 <?php 
 		endwhile;
