@@ -8,6 +8,31 @@ function load_scripts(){
 	wp_enqueue_script( 'scripts', get_template_directory_uri().'/js/scripts.js', false);
 }
 
+/* ---------------- SITE CALLS -------------------------- */
+
+add_action( 'do_login', 'do_login' );
+function do_login(){
+	if(is_user_logged_in()) wp_redirect(home_url()); //se o usuario ja esta logado, redirect para a home
+
+	if(
+		isset($_POST['login']) && isset($_POST['senha']) //foram enviados senha e login
+	){
+		$user = wp_signon([
+			'user_login' => $_POST['login'],
+			'user_password' => $_POST['senha'],
+			'remeber' => true
+		]); //validar as credenciais enviadas
+
+		if(is_wp_error($user)){
+			// $_POST['login_error'] = $user->get_error_message();
+			$_POST['login_error'] = "Login ou senha incorretos";
+		}else{
+			wp_redirect(home_url());
+		}
+	}
+
+}
+
 
 /* ------------------ AJAX CALLS -------------------------*/
 
