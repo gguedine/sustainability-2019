@@ -1,7 +1,5 @@
 <?php get_header(); ?>
 <?php do_action('do_login'); ?>
-<?php var_dump($_POST) ?>
-<?php //wp_login_form([ 'redirect' => site_url(), 'formid' => 'loginform' ]); ?>
 
 <?php if(isset($_POST['login_error'])): ?>
 	<h2><?php  echo $_POST['login_error']; ?></h2>
