@@ -1,5 +1,5 @@
-<?php get_header(); ?>
 <?php do_action('do_login'); ?>
+<?php get_header(); ?>
 
 <?php if(isset($_POST['login_error'])): ?>
 	<h2><?php  echo $_POST['login_error']; ?></h2>
