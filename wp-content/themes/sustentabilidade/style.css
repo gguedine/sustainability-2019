@@ -1,0 +1,58 @@
+/* Sumario
+1 - Login Page
+2 - Home
+3 - Adote uma especie
+ */
+
+
+ /* 1 - Login Page */
+ @import "bourbon";
+
+
+.box {	
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.form {
+  max-width: 380px;
+  padding: 15px 35px 45px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,0.1);  
+  opacity: 0.8;
+
+}
+
+.form-head{
+    text-align: center;
+}
+
+.checkbox {
+      margin-bottom: 30px;
+      font-weight: normal;
+	}
+
+.form-control {
+	  position: relative;
+	  font-size: 16px;
+	  height: auto;
+	  padding: 10px;
+
+}
+
+input[type="text"] {
+	  margin-bottom: 5px;
+	  border-bottom-left-radius: 0; 
+	  border-bottom-right-radius: 0;
+}
+
+input[type="password"] {
+	  margin-bottom: 20px;
+	  border-top-left-radius: 0;
+	  border-top-right-radius: 0;
+}
+.center-text-login{
+    text-align: center;
+}
+
