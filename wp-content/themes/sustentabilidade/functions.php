@@ -33,6 +33,28 @@ function do_login(){
 
 }
 
+add_action( 'do_cadastro', 'do_cadastro');
+function do_cadastro(){
+	if(
+		isset($_POST['login']) && isset($_POST['senha']) &&//foram enviados senha e login
+		filter_var($_POST['login'], FILTER_VALIDATE_EMAIL) //eh um email valido
+	){
+		if(username_exists( $username ) == false){
+			wp_create_user($_POST['login'], $_POST['senha'], $_POST['login']);
+			$user = wp_signon([
+				'user_login' => $_POST['login'],
+				'user_password' => $_POST['senha'],
+				'remeber' => true
+			]);
+			wp_redirect(home_url());
+
+		}else{
+			$_POST['error'] = "Usuário já cadastrado";
+		}
+			
+	}//validation if
+}//function
+
 
 /* ------------------ AJAX CALLS -------------------------*/
 
