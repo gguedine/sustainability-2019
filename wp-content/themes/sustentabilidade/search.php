@@ -14,6 +14,10 @@
 
 <?php 
 		endwhile;
+	else:
+?>
+	<h2>Nenhum resultado encontrado.</h2>
+<?php
 	endif;
 ?>
 
