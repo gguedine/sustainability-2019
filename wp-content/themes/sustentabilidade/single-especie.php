@@ -9,20 +9,22 @@
 
 <?php the_title(); ?>
 <?php the_content(); ?>
+<div class="box">
+    <div class="doacao-box">
+        <a href="<?php print get_post_type_archive_link(get_post_type()) ?>">Voltar para especies</a>
+        <div>Já foram doados <div id="total_doado">R$ <?php the_field('total_doado'); ?></div> para <div class="nome-especie"><?php the_title(); ?></div> até agora</div>
 
-<a href="<?php print get_post_type_archive_link(get_post_type()) ?>">Voltar para especies</a>
-<div>Já foram doados R$<div id="total_doado"><?php the_field('total_doado'); ?></div> para <?php the_title(); ?> até agora</div>
 
+        <button id="doacao" class="btn btn-success btn-block">FAZER DOACAO</button>
+        <form   id="form_doacao">
+            <label for="valor_doacao">Valor</label>
+            <input id="inpt_doacao" type="number" step="0.01" name="doacao">
+            <input type="hidden" name="especie_id" value="<?php echo get_the_ID(); ?>">
 
-<button id="doacao">FAZER DOACAO</button>
-<form  style="display:none" id="form_doacao">
-	<label for="valor_doacao">Valor</label>
-	<input id="inpt_doacao" type="number" step="0.01" name="doacao">
-	<input type="hidden" name="especie_id" value="<?php echo get_the_ID(); ?>">
-
-	<button type="submit">DOAR</button>
-</form>
-
+            <button type="submit" class="btn btn-success btn-block">DOAR</button>
+        </form>
+    </div>
+</div>
 <?php 
 		endwhile;
 	endif;
