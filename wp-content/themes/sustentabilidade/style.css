@@ -1,58 +1,87 @@
-/* Sumario
-1 - Login Page
-2 - Home
-3 - Adote uma especie
- */
-
-
- /* 1 - Login Page */
- @import "bourbon";
-
-
-.box {	
-    margin-top: 80px;
-    margin-bottom: 80px;
+body {
+  font-family: Montserrat, sans-serif;
+  text-align: center;
 }
 
-.form {
-  max-width: 380px;
-  padding: 15px 35px 45px;
-  margin: 0 auto;
-  background-color: #fff;
-  border: 1px solid rgba(0,0,0,0.1);  
-  opacity: 0.8;
-
+.navbar-header, .footer{
+    font-size: 20px;
+    font-family: Montserrat, sans-serif;
+    background-color: none;
 }
 
-.form-head{
-    text-align: center;
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
 }
 
-.checkbox {
-      margin-bottom: 30px;
-      font-weight: normal;
-	}
-
-.form-control {
-	  position: relative;
-	  font-size: 16px;
-	  height: auto;
-	  padding: 10px;
-
+.navbar .navbar-collapse {
+  text-align: center;
 }
 
-input[type="text"] {
-	  margin-bottom: 5px;
-	  border-bottom-left-radius: 0; 
-	  border-bottom-right-radius: 0;
+#itens-header {
+  font-size: 20px;
+  font-family: Montserrat, sans-serif;
+  -webkit-transition: color 200ms ease;
+  transition: color 200ms ease;
+  line-height: 20px;
 }
 
-input[type="password"] {
-	  margin-bottom: 20px;
-	  border-top-left-radius: 0;
-	  border-top-right-radius: 0;
+.img-post{
+    width:50%;
+    height: auto;
+    display: block;
+    border-radius: 2p;
 }
-.center-text-login{
-    text-align: center;
+
+#blog-post{
+  width: 50%;
+  height: 50%;
+  display: inline-block;
+  border-radius: 2px;
+  padding: 3px;
+  transition: .5s ease;
+  backface-visibility: hidden;
 }
+
+.blog-content{
+  text-align: justify;
+  margin: 4px;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  right: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+.text {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 32px 32px;
+}
+
+.blog-post:hover{
+  background: gray;
+}
+
+.blog-post:hover .img-post {
+  background: gray;
+  opacity: 0.5;
+}
+
+.blog-post:hover .middle {
+  opacity: 1;
+}
+
+
 
