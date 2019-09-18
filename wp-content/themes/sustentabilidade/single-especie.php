@@ -9,6 +9,7 @@
 
 <?php the_title(); ?>
 <?php the_content(); ?>
+<img src="<?php echo get_field('imagem')['sizes']['medium']; ?>">
 <div class="box">
     <div class="doacao-box">
         <a href="<?php print get_post_type_archive_link(get_post_type()) ?>">Voltar para especies</a>
