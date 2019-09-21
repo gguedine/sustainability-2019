@@ -58,8 +58,6 @@ function do_cadastro(){
 
 add_action( 'do_cria_evento', 'do_cria_evento');
 function do_cria_evento(){
-	var_dump($_POST);
-	var_dump($_FILES);
 
 	if(empty($_POST)) return;
 
@@ -110,7 +108,7 @@ function do_cria_evento(){
 		update_field('imagem', $attach_id, $evento_id);
 
 	else:
-		die('fail');
+		$_POST['erro'] = 'Preencha todos os campos';
 	endif;
 
 }
