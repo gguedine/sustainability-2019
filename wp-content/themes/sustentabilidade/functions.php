@@ -56,6 +56,65 @@ function do_cadastro(){
 }//function
 
 
+add_action( 'do_cria_evento', 'do_cria_evento');
+function do_cria_evento(){
+	var_dump($_POST);
+	var_dump($_FILES);
+
+	if(empty($_POST)) return;
+
+	if(
+
+		isset($_POST['nome'])  && !empty($_POST['nome']) &&
+		isset($_POST['descricao'])  && !empty($_POST['descricao']) &&
+		isset($_POST['dia'])  && !empty($_POST['dia']) &&
+		!empty($_FILES['imagem'])
+
+	):
+	
+		require_once( ABSPATH . 'wp-admin/includes/image.php' );
+		require_once( ABSPATH . 'wp-admin/includes/file.php' );
+		require_once( ABSPATH . 'wp-admin/includes/media.php' );
+			
+
+		$evento_id = wp_insert_post([
+			'post_title' => $_POST['nome'],
+			'post_content' => $_POST['descricao'],
+			'post_status' => 'publish',
+			'post_type' => 'evento',
+		]);
+		update_field('data_evento', $_POST['dia'], $evento_id);
+		$upload = wp_handle_upload($_FILES['imagem'], array('test_form' => FALSE));
+
+		$filename = $upload['file'];
+
+		// Check the type of file. We'll use this as the 'post_mime_type'.
+		$filetype = wp_check_filetype( basename( $filename ), null );
+
+		// Get the path to the upload directory.
+		$wp_upload_dir = wp_upload_dir();
+
+		// Prepare an array of post data for the attachment.
+		$attachment = array(
+			'guid'           => $wp_upload_dir['url'] . '/' . basename( $filename ), 
+			'post_mime_type' => $filetype['type'],
+			'post_title'     => preg_replace( '/\.[^.]+$/', '', basename( $filename ) ),
+			'post_content'   => '',
+			'post_status'    => 'inherit'
+		);
+
+		// Insert the attachment.
+		$attach_id = wp_insert_attachment( $attachment, $filename, 0 );
+
+
+		update_field('imagem', $attach_id, $evento_id);
+
+	else:
+		die('fail');
+	endif;
+
+}
+
 /* ------------------ AJAX CALLS -------------------------*/
 
 add_action( 'wp_ajax_do_doacao', 'do_doacao' );
