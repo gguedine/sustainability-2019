@@ -1,5 +1,6 @@
 <?php
 //functions file
+show_admin_bar( false ); //disable admin bar
 
 add_action('wp_enqueue_scripts','load_scripts');
 
