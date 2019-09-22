@@ -31,4 +31,23 @@ $(document).ready(function(){
 
 	});
 
+	$('.registrar-evento').on('click', function(e){
+		e.preventDefault();
+
+		data = {
+			'action' : 'do_registrar_evento',
+			'user_id' : $('.registrar-evento').data('user'),
+			'evento_id' : $('.registrar-evento').data('evento')
+		}
+
+		$.post(ajaxurl, data, function(response){
+			if(response.success){
+				location.reload();
+			}else{
+
+			}
+		});
+
+	});
+
 });

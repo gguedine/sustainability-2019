@@ -139,3 +139,36 @@ function do_doacao(){
 	$ret->new_total = $t;
 	wp_send_json($ret,200);
 }
+
+add_action( 'wp_ajax_do_registrar_evento', 'do_registrar_evento' );
+add_action( 'wp_ajax_nopriv_do_registrar_evento', 'do_registrar_evento' ); // This is for unlogged users.
+
+function do_registrar_evento(){
+
+	$ret = new StdClass();
+	$ret->success = false;
+
+	$ret->post = $_POST;
+
+	if(
+		isset($_POST['user_id']) && !empty($_POST['user_id']) &&
+		isset($_POST['evento_id']) && !empty($_POST['evento_id'])
+	):
+	$user_id = (int)$_POST['user_id'];
+	$evento_id = (int)$_POST['evento_id'];
+
+	$registrados = get_field('registrados', $evento_id);
+	if(is_array($registrados)){
+		array_push($registrados, $user_id);
+	}else{
+		$registrados = array($user_id);
+	}
+	update_field('registrados', $registrados, $evento_id);
+
+	$ret->success = true;
+	wp_send_json($ret, 200);
+
+	endif;//validacao campos
+
+
+}
