@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-  	<title>Sustainability</title>
+  	<title>Sustentabilidade</title>
   	<meta charset="utf-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1">
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -19,7 +19,7 @@
 
     <nav class="navbar navbar-inverse">
       <div class="navbar-header">
-        <a id="itens-header" class="navbar-brand" href="#"> Sustainability</a>
+        <a id="itens-header" class="navbar-brand" href="<?php echo home_url(); ?>"> Sustentabilidade</a>
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
