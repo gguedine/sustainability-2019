@@ -50,4 +50,11 @@ $(document).ready(function(){
 
 	});
 
+	$('#eventos-select').on('change', function(e){
+		e.preventDefault();
+		var cat_id = $('#eventos-select').find(":selected").data('cat_id');
+		window.location.href = location.protocol + '//' + location.host + location.pathname + "?cat=" + cat_id ;
+
+	});
+
 });

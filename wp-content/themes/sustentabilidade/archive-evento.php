@@ -1,5 +1,12 @@
 <?php get_header(); ?>
 
+<select id="eventos-select" class="form-control">
+	<option data-cat_id='-1'>Todos</option>
+	<?php foreach (get_terms(['exclude' => '1']) as $key => $cat): ?>
+	<option <?php if(isset($_GET['cat']) && $_GET['cat'] == $cat->term_id ): echo 'selected'; endif; ?>  data-cat_id="<?php echo $cat->term_id; ?>" ><?php echo $cat->name; ?></option>
+	<?php endforeach; ?>
+</select>
+
 <?php 
 	if(have_posts()):
 	echo '<div class="row">';
