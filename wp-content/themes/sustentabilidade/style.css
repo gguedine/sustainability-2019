@@ -3,6 +3,10 @@ body {
   text-align: center;
 }
 
+.site-container{
+  width: 100%;  
+}
+
 .navbar-header, .footer{
     font-size: 20px;
     font-family: Montserrat, sans-serif;
@@ -28,10 +32,13 @@ body {
 }
 
 .img-post{
-    width:50%;
+    width:30%;
     height: auto;
     display: block;
     border-radius: 2p;
+}
+.img-post img{
+
 }
 
 #blog-post{
@@ -83,5 +90,18 @@ body {
   opacity: 1;
 }
 
+.sa-content{
+  padding:8%;
+}
+.sa-content p{  
+  text-align: justify;
+  font-size:18px;
+}
+.sa-content-2{
+  padding:0 8%;  
+}
+.sa-img-2{
+  width: 60%;
+}
 
 
