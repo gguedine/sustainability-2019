@@ -90,18 +90,28 @@ body {
   opacity: 1;
 }
 
-.sa-content{
-  padding:8%;
+.sa-content, .sa-content-3, .sa-content-4, .sa-content-5 {
+  padding:6% 8%;
 }
-.sa-content p{  
+.sa-content p, .sa-content-3 p, .sa-content-4 p, .sa-content-5 p{  
   text-align: justify;
   font-size:18px;
+}
+.sa-content-5 h3{
+  font-size: 34px;
+  margin:40px 0 80px 0;
+}
+.sa-content-4 .card{
+  width: 100%;
 }
 .sa-content-2{
   padding:0 8%;  
 }
 .sa-img-2{
-  width: 60%;
+  width: 100%;
 }
-
+.sa-img-5{
+  width: 100%;
+  
+}
 
