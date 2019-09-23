@@ -2,22 +2,44 @@
 
 <?php 
 	if(have_posts()):
+	echo '<div class="row">';
 		while(have_posts()):
 			the_post();
 ?>
 
-<div class="evento">
-	<h1><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h1>
-	<?php the_content(); ?>
-
-	<?php $registrados_count = count(get_field('registrados')); ?>
-	<span><?php echo $registrados_count; ?> usuário<?php if($registrados_count != 1): echo "s"; endif?> registrado<?php if($registrados_count != 1): echo "s"; endif?> até agora.</span>
-	
+<div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="<?php echo get_field('imagem')['sizes']['medium'] ?>">
+      <div class="caption">
+        <h3><?php the_title(); ?></h3>
+        <h4>
+        	<?php $registrados_count = count(get_field('registrados')); ?>
+        	<?php the_field("data_evento") ?> - <?php echo $registrados_count; ?> usuário<?php if($registrados_count != 1): echo "s"; endif?> registrado<?php if($registrados_count != 1): echo "s"; endif?> até agora.
+       	</h4>
+        <p><?php echo wp_trim_words(get_the_content(), 55, '...'); ?></p>
+        <?php if(!empty(get_the_category())): ?>
+	        <div class="card">
+	          <ul class="list-group list-group-flush">
+	          	<?php foreach (get_the_category() as $key => $value): ?>
+	            	<li class="list-group-item"><?php echo $value->cat_name; ?></li>
+	        	<?php endforeach; ?>
+	          </ul>
+	        </div>
+    	<?php endif; ?>
+        <p>
+        	<a href="<?php the_permalink(); ?>" class="btn btn-info btn-lg btn-block" role="button">Detalhes</a> 
+        </p>
+      </div>
+	</div>
 </div>
 
-
 <?php 
+			if(($wp_query->current_post+1%3) == 0):
+				echo '</div>';
+				echo '<div class="row">';
+			endif;
 		endwhile;
+  	echo '</div>';
 	endif;
 ?>
 
