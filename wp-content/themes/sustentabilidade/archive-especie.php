@@ -18,7 +18,7 @@
 						<p><?php echo wp_trim_words(get_the_content(), 55, '...'); ?></p>
 				    	<p>
 				    		<!-- <a href="#" class="btn btn-primary" role="button">Button</a>  -->
-				    		<a href="<?php the_permalink(); ?>" class="btn btn-default" role="button">Button</a>
+				    		<a href="<?php the_permalink(); ?>" class="btn btn-default" role="button">Saiba Mais...</a>
 				    	</p>
 			   		</div>
 				</div>

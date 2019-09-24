@@ -31,7 +31,9 @@
 ?>
 				<h3>Você já se registrou nesse evento</h3>
 			<?php else: ?>
+				<?php if(is_user_logged_in()): ?>
 				<button class="registrar-evento"  data-user="<?php echo get_current_user_ID(); ?>" data-evento="<?php echo get_the_ID(); ?>" >Registrar</button>
+				<?php endif; ?>
 			<?php endif ?>
 	<span><?php echo $registrado_arr['user_email']; ?></span><br>
 
@@ -40,7 +42,9 @@
 	else:
 ?>
 <h3>Ninguem se registrou ainda nesse evento</h3>
+<?php if(is_user_logged_in()): ?>
 <button class="registrar-evento"  data-user="<?php echo get_current_user_ID(); ?>" data-evento="<?php echo get_the_ID(); ?>" >Registrar</button>
+<?php endif; ?>
 <?php
 	endif;
 ?>

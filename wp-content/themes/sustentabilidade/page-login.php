@@ -2,7 +2,7 @@
 <?php get_header(); ?>
 
 <?php if(isset($_POST['login_error'])): ?>
-	<h2><?php  echo $_POST['login_error']; ?></h2>
+	<div class="alert alert-danger" role="alert"><?php  echo $_POST['login_error']; ?></div>
 <?php endif; ?>
 <div class="box">
 	<form class = "form" method="post" action="<?php ?>">
