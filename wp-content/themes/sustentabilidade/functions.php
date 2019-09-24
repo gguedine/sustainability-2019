@@ -83,6 +83,10 @@ function do_cria_evento(){
 			'post_type' => 'evento',
 		]);
 		update_field('data_evento', $_POST['dia'], $evento_id);
+		if(isset($_POST['categoria']) && !empty($_POST['categoria'])){
+			wp_set_post_categories($evento_id, $_POST['categoria'] );
+		}
+
 		$upload = wp_handle_upload($_FILES['imagem'], array('test_form' => FALSE));
 
 		$filename = $upload['file'];
@@ -107,6 +111,9 @@ function do_cria_evento(){
 
 
 		update_field('imagem', $attach_id, $evento_id);
+
+		$_POST['success_message'] = "Evento criado com sucesso";
+		$_POST['success_infos'] = ['permalink' => get_the_permalink($evento_id), 'title' => get_the_title($evento_id)]; 
 
 	else:
 		$_POST['erro'] = 'Preencha todos os campos';
