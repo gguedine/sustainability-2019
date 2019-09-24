@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 
+<a href="<?php echo home_url('cria-evento'); ?>"><div class="alert alert-info" role="alert">Criar evento</div></a>
+
 <select id="eventos-select" class="form-control">
 	<option data-cat_id='-1'>Todos</option>
 	<?php foreach (get_terms(['exclude' => '1']) as $key => $cat): ?>
