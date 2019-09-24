@@ -115,3 +115,8 @@ body {
   
 }
 
+.btn-right-margin{
+  float: right;
+  width: 12%; 
+  margin-right: 15px;
+}

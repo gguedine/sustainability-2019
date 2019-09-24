@@ -1,6 +1,10 @@
 <?php get_header(); ?>
 
-<a href="<?php echo home_url('cria-evento'); ?>"><div class="alert alert-info" role="alert">Criar evento</div></a>
+<div class="btn-right-margin">
+	<a href="<?php echo home_url('cria-evento'); ?>" class="alert-link">
+		<div class="alert alert-info" role="alert">Criar evento</div>
+	</a>
+</div>
 
 <select id="eventos-select" class="form-control">
 	<option data-cat_id='-1'>Todos</option>
