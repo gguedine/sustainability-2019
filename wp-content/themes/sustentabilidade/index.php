@@ -17,11 +17,11 @@
 					A sustentabilidade ambiental está muito ligada ao termo desenvolvimento sustentável, que visa à utilização dos produtos do meio ambiente sem destruí-los ou extingui-los, garantindo, simultaneamente, o desenvolvimento financeiro, tecnológico, industrial, etc.
 				</p>
 			</div>	
-			<div class="sa-content-2">
+			<!-- <div class="sa-content-2">
 				<a>
 			    	<img class="sa-img-2 center-block" src="https://observatorio3setor.org.br/wp-content/uploads/2018/02/preserva%C3%A7%C3%A3o1.jpg">
 			    </a>
-			</div>
+			</div> -->
 
 			<div class="sa-content-3">
 
@@ -34,7 +34,7 @@
 
 			<button type="button" class="btn btn-success">Saiba Mais</button>
 
-			<div class="sa-content-4 row">
+			<!-- <div class="sa-content-4 row">
 				<div class="col-sm">								
 					<div class="card" style="width: 100%;">
 					  <img class="card-img-top" src="https://pixel.nymag.com/imgs/fashion/daily/2019/06/18/18-puppy-dog-eyes.w700.h700.jpg" alt="Imagem de capa do card">
@@ -65,7 +65,7 @@
 					  </div>
 					</div>
 				</div>
-			</div>
+			</div> -->
 
 		</div>
 		
