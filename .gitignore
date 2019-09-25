@@ -12,6 +12,7 @@ wp-content/*
 !wp-content/plugins/
 !wp-content/themes/
 
+wp-config.php
 # ignore these plugins
 wp-content/plugins/hello.php
 
@@ -25,5 +26,6 @@ node_modules/
 *.log
 *.sql
 *.sqlite
+.htaccess
 
 # End of https://www.gitignore.io/api/wordpress
