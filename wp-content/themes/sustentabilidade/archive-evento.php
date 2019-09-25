@@ -26,7 +26,8 @@
       <div class="caption">
         <h3><?php the_title(); ?></h3>
         <h4>
-        	<?php $registrados_count = count(get_field('registrados')); ?>
+		<?php $registrados = is_array(get_field('registrados'))? get_field('registrados') : array(); ?>
+        	<?php $registrados_count = count($registrados); ?>
         	<?php the_field("data_evento") ?> - <?php echo $registrados_count; ?> usuário<?php if($registrados_count != 1): echo "s"; endif?> registrado<?php if($registrados_count != 1): echo "s"; endif?> até agora.
        	</h4>
         <p><?php echo wp_trim_words(get_the_content(), 55, '...'); ?></p>
