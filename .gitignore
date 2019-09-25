@@ -28,4 +28,5 @@ node_modules/
 *.sqlite
 .htaccess
 
+wp-config.php
 # End of https://www.gitignore.io/api/wordpress
