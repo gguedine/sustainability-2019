@@ -1,3 +1,18 @@
+/*
+Theme Name: Tema1
+Theme URI: https://wordpress.org/themes/tema1/
+Author: lipeflorentino
+Author URI: https://wordpress.org/
+Description: Um tema legal!
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: tema1
+Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
 body {
   font-family: Montserrat, sans-serif;
   text-align: center;
