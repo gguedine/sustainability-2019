@@ -32,7 +32,7 @@
           <!-- <li class="nav-item "><a class="nav-link" id="itens-header" href="#">About</a></li> -->
         <li>
         	<?php //get_search_form(); ?>
-        	<form class="navbar-form" role="search" method="get" id="searchform" class="searchform" action="http://sustentabilidade.local/">
+        	<form class="navbar-form" role="search" method="get" id="searchform" class="searchform" action="<?php echo home_url(); ?>">
 				<div class="form-group">
 					<input id="itens-header" style="height:100%" type="text" class="form-control" placeholder="Search" value="" name="s" id="s" />
 				</div>
