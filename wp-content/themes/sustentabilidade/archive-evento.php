@@ -6,7 +6,7 @@
 	</a>
 </div>
 
-<select id="eventos-select" class="form-control">
+<select id="eventos-select" class="form-control event-bar">
 	<option data-cat_id='-1'>Todos</option>
 	<?php foreach (get_terms(['exclude' => '1']) as $key => $cat): ?>
 	<option <?php if(isset($_GET['cat']) && $_GET['cat'] == $cat->term_id ): echo 'selected'; endif; ?>  data-cat_id="<?php echo $cat->term_id; ?>" ><?php echo $cat->name; ?></option>
@@ -21,7 +21,7 @@
 ?>
 
 <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
+    <div class="thumbnail event-thumb">
       <img src="<?php echo get_field('imagem')['sizes']['medium'] ?>">
       <div class="caption">
         <h3><?php the_title(); ?></h3>
@@ -30,7 +30,7 @@
         	<?php $registrados_count = count($registrados); ?>
         	<?php the_field("data_evento") ?> - <?php echo $registrados_count; ?> usuário<?php if($registrados_count != 1): echo "s"; endif?> registrado<?php if($registrados_count != 1): echo "s"; endif?> até agora.
        	</h4>
-        <p><?php echo wp_trim_words(get_the_content(), 55, '...'); ?></p>
+        <p class="event-p"><?php echo wp_trim_words(get_the_content(), 55, '...'); ?></p>
         <?php if(!empty(get_the_category())): ?>
 	        <div class="card">
 	          <ul class="list-group list-group-flush">

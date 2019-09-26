@@ -16,6 +16,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 body {
   font-family: Montserrat, sans-serif;
   text-align: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
 }
 
 .site-container{
@@ -51,9 +54,6 @@ body {
     height: auto;
     display: block;
     border-radius: 2p;
-}
-.img-post img{
-
 }
 
 #blog-post{
@@ -104,8 +104,17 @@ body {
 .blog-post:hover .middle {
   opacity: 1;
 }
-
-.sa-content, .sa-content-3, .sa-content-4, .sa-content-5 {
+.main-content{  
+  min-height: 100%;
+}
+.main-content img{
+  width:100%;
+  margin:30px auto;
+}
+.box{
+  padding:6% 10%;
+}
+.sa-content, .sa-content-3, .sa-content-4, .sa-content-5, .main-content {
   padding:6% 8%;
 }
 .sa-content p, .sa-content-3 p, .sa-content-4 p, .sa-content-5 p{  
@@ -134,4 +143,28 @@ body {
   float: right;
   width: 12%; 
   margin-right: 15px;
+}
+
+.doacao-aviso{
+  padding:10px;
+}
+
+.doacao-box .btn-block{
+  width: 20% !important;
+  margin: 20px auto !important;
+}
+.box h3{
+  color:red;
+  font-size:13px;
+}
+.event-bar{
+  clear: both !important;
+  width: 30% !important;
+  margin: 5% auto !important;
+}
+.event-thumb{
+  min-height: 400px !important;
+}
+.event-p{
+  height: 170px;
 }

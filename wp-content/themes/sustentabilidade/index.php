@@ -16,6 +16,12 @@
 
 					A sustentabilidade ambiental está muito ligada ao termo desenvolvimento sustentável, que visa à utilização dos produtos do meio ambiente sem destruí-los ou extingui-los, garantindo, simultaneamente, o desenvolvimento financeiro, tecnológico, industrial, etc.
 				</p>
+
+				<div class="card">
+				  <div class="card-body">
+				    <p>A sustentabilidade ambiental está muito ligada ao termo desenvolvimento sustentável, que visa à utilização dos produtos do meio ambiente sem destruí-los ou extingui-los, garantindo, simultaneamente, o desenvolvimento financeiro, tecnológico, industrial, etc. Você pode nos ajudar de diversas formas, seja contribuindo para causa regularmente com doações ou se informando e passando adiante essas informação. Saiba como clicando no botão abaixo.</p>
+				  </div>
+				</div>	
 			</div>	
 			<!-- <div class="sa-content-2">
 				<a>
@@ -23,14 +29,10 @@
 			    </a>
 			</div> -->
 
-			<div class="sa-content-3">
+			<!-- <div class="sa-content-3">
 
-				<div class="card">
-				  <div class="card-body">
-				    <p>A sustentabilidade ambiental está muito ligada ao termo desenvolvimento sustentável, que visa à utilização dos produtos do meio ambiente sem destruí-los ou extingui-los, garantindo, simultaneamente, o desenvolvimento financeiro, tecnológico, industrial, etc. Você pode nos ajudar de diversas formas, seja contribuindo para causa regularmente com doações ou se informando e passando adiante essas informação. Saiba como clicando no botão abaixo.</p>
-				  </div>
-				</div>				
-			</div>
+							
+			</div> -->
 
 			<button type="button" class="btn btn-success">Saiba Mais</button>
 
