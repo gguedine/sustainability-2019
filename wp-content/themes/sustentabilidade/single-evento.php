@@ -27,18 +27,21 @@
 			if(!empty($registrados)):
 				$registrado_key = array_search(get_current_user_ID(), array_column($registrados, 'ID'));
 				//retorna a chave do usuario no array ou false
+			?>
+				<?php if(!($registrado_key === false)): ?>
+						<h3>Você já se registrou nesse evento</h3>
+				<?php else: ?>
+					<?php if(is_user_logged_in()): ?>
+						<button class="registrar-evento"  data-user="<?php echo get_current_user_ID(); ?>" data-evento="<?php echo get_the_ID(); ?>" >Registrar</button>
+					<?php else: ?>
+						<div class="alert alert-success" role="alert">Se logue para se registrar nesse evento</div>
+					<?php endif; ?>
+				<?php endif ?>
+		<?php
+
 				echo '<h4>Usuários confirmados:</h4>';
 				foreach ($registrados as $key => $registrado_arr):
-					if(!($registrado_key === false)):
 		?>
-						<h3>Você já se registrou nesse evento</h3>
-					<?php else: ?>
-						<?php if(is_user_logged_in()): ?>
-							<button class="registrar-evento"  data-user="<?php echo get_current_user_ID(); ?>" data-evento="<?php echo get_the_ID(); ?>" >Registrar</button>
-						<?php else: ?>
-							<div class="alert alert-success" role="alert">Se logue para se registrar nesse evento</div>
-						<?php endif; ?>
-					<?php endif ?>
 
 				<span><?php echo $registrado_arr['user_email']; ?></span><br>
 
