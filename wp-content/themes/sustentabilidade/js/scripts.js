@@ -23,7 +23,20 @@ $(document).ready(function(){
 			if(response.success){
 				$("#total_doado").text(response.new_total);
 				$('#inpt_doacao').val('');
-				alert("Obrigado por sua doação");
+				if(data.valor_doacao <= 5){
+					$('.alert-doacao').text('Obrigado por sua doação, sua contribuição irá ajudar muito as especies em extinção');
+				}else if(data.valor_doacao > 5 && data.valor_doacao <= 10){
+					$('.alert-doacao').text('Obrigado por sua doação, você receberá 1 adesivo da coleção bichos felizes.');
+				}else if(data.valor_doacao > 10 && data.valor_doacao <= 50){
+					$('.alert-doacao').text('Obrigado por sua doação, você receberá 1 camisa super style autografada pelo macaco Joe!');
+				}else if(data.valor_doacao > 50){
+					$('.alert-doacao').text('Obrigado por sua doação, você receberá 1 kit completo amigo dos animais (camisa, boné, adesivos, e muito mais!)');
+				}
+				$('.alert-doacao').show();
+				setTimeout(function() {
+				  $(".alert-doacao").fadeOut(1200);
+				}, 5000)
+
 			}else{
 
 			}
