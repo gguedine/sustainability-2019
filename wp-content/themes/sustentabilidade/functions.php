@@ -121,6 +121,13 @@ function do_cria_evento(){
 
 }
 
+function send_mail_to_all_users($subject, $message, $headers = ''){
+	foreach (get_users() as $user):
+		$user_email = $user->user_email;
+		wp_mail($user_email, $subject, $message, $headers);
+	endforeach;
+}
+
 /* ------------------ AJAX CALLS -------------------------*/
 
 add_action( 'wp_ajax_do_doacao', 'do_doacao' );
