@@ -11,10 +11,12 @@
             <h1><?php the_title(); ?></h1>
             <img src="<?php echo get_field('imagem')['sizes']['medium']; ?>">
             <?php the_content(); ?>
+
+            <?php if(is_user_logged_in()): ?>
             <div class="doacao-box">
                 <!-- <a href="<?php print get_post_type_archive_link(get_post_type()) ?>">Voltar para especies</a> -->
                 <div class="doacao-aviso">Já foram doados <span id="total_doado">R$ <?php the_field('total_doado'); ?> para <strong class="nome-especie"> <?php the_title(); ?> </strong> até agora</span></div>        
-                <div style="display: none;" class="alert-doacao alert alert-success" role="alert">AAA</div>
+                <div style="display: none;" class="alert-doacao alert alert-success" role="alert"></div>
                 <form   id="form_doacao">
                     <label for="valor_doacao">Faça uma doação</label>
                     <div class="input-group">
@@ -25,8 +27,10 @@
                     <button type="submit" class="btn btn-success btn-block">DOAR</button>
                 </form>
             </div>
+            <?php endif; ?>
         </div> 
 
+        <?php if(is_user_logged_in()): ?>
         <div class="bottom-content">
             <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                 <div class="panel panel-default">
@@ -73,6 +77,10 @@
                 </div>
             </div>        
         </div>   
+        <?php else: ?>
+            <div class="alert alert-success" role="alert">Se logue para realizar uma doação</div>
+        <?php endif; ?>
+
     </div>
 
 
