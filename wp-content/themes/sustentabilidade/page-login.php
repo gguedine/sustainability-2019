@@ -7,9 +7,9 @@
 <div class="box">
 	<form class = "form" method="post" action="<?php ?>">
 		<h2 class="form-head">Entrar</h2>
-		<label class="center-text-login">E-mail</label>
+		<label class="text-center">E-mail</label>
 		<input type="text" class="form-control" name="login" placeholder="E-mail" required="" autofocus="" />
-		<label class="center-text-login">Senha</label>
+		<label class="text-center">Senha</label>
 		<input type="password" class="form-control" name="senha" placeholder="Senha" required=""/>      
 		<button class="btn btn-lg btn-dark btn-block" type="submit">Logar</button>   
 	</form>
