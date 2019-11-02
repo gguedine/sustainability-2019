@@ -9,7 +9,7 @@
 		<span><?php the_content(); ?></span>
 
 		<?php $afiliados = get_field('afiliados'); ?>
-		<?php if(is_user_logged_in() && !in_array(get_current_user_ID(), $afiliados)): ?>
+		<?php if(is_user_logged_in() && (!$afiliados || !in_array(get_current_user_ID(), $afiliados))): ?>
 			<button id="afiliar" data-uid="<?php print get_current_user_ID(); ?>" data-id="<?php print get_the_id(); ?>">Afiliar</button>
 		<?php endif; ?>
 
