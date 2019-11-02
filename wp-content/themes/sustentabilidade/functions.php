@@ -186,3 +186,27 @@ function do_registrar_evento(){
 
 
 }
+
+
+add_action( 'wp_ajax_do_afiliar', 'do_afiliar' );
+add_action( 'wp_ajax_nopriv_do_afiliar', 'do_afiliar' ); // This is for unlogged users.
+function do_afiliar(){
+
+	$ret = new StdClass();
+	$ret->success = false;
+
+
+	$user_id = $_POST['user_id'];
+	$iniciativa_id = $_POST['iniciativa_id'];
+
+	$afiliados = get_field('afiliados', $iniciativa_id);
+	if(!in_array($user_id, $afiliados)){
+		array_push($afiliados, $user_id);
+		update_field('afiliados', $afiliados, $iniciativa_id);
+	}
+
+	$ret->success = true;
+	wp_send_json($ret, 200);
+
+
+}

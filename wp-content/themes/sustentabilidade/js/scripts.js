@@ -70,4 +70,23 @@ $(document).ready(function(){
 
 	});
 
+	$('#afiliar').on('click', function(e){
+		e.preventDefault();
+		var user_id = $('#afiliar').data('uid');
+		var iniciativa_id = $('#afiliar').data('id');
+
+		data = {
+			'user_id': user_id,
+			'iniciativa_id': iniciativa_id,
+			'action': 'do_afiliar'
+		}
+
+		$.post(ajaxurl, data, function(response){
+			if(response.success){
+
+			}
+		});
+
+	});
+
 });
