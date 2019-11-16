@@ -7,8 +7,12 @@
 					the_post();
 		?>
 
-					<?php the_title(); ?>
+				<div class="iniciativa">
+					<a href="<?php the_permalink(); ?>">
+						<?php the_title(); ?>
+					</a>
 					<?php the_content(); ?>
+				</div>
 
 		<?php 
 				endwhile;

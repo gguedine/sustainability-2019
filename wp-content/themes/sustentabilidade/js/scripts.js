@@ -83,10 +83,25 @@ $(document).ready(function(){
 
 		$.post(ajaxurl, data, function(response){
 			if(response.success){
-
+				location.reload();
 			}
 		});
 
+	});
+
+
+	$('#btn_assinar').on("click", function(e){
+		e.preventDefault();
+
+		data = {
+			action: 'do_assinar',
+			user_id: $('#btn_assinar').data('uid'),
+			as_id: $('#btn_assinar').data('aid')
+		};
+
+		$.post(ajaxurl, data, function(response){
+			console.log(response);
+		});
 	});
 
 });

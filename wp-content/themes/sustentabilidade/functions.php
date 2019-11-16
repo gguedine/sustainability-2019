@@ -168,22 +168,22 @@ function do_registrar_evento(){
 		isset($_POST['user_id']) && !empty($_POST['user_id']) &&
 		isset($_POST['evento_id']) && !empty($_POST['evento_id'])
 	):
-	$user_id = (int)$_POST['user_id'];
-	$evento_id = (int)$_POST['evento_id'];
+		$user_id = (int)$_POST['user_id'];
+		$evento_id = (int)$_POST['evento_id'];
 
-	$registrados = get_field('registrados', $evento_id);
-	if(is_array($registrados)){
-		array_push($registrados, $user_id);
-	}else{
-		$registrados = array($user_id);
-	}
-	update_field('registrados', $registrados, $evento_id);
+		$registrados = get_field('registrados', $evento_id);
+		if(is_array($registrados)){
+			array_push($registrados, $user_id);
+		}else{
+			$registrados = array($user_id);
+		}
+		update_field('registrados', $registrados, $evento_id);
 
-	$ret->success = true;
-	wp_send_json($ret, 200);
+		$ret->success = true;
 
 	endif;//validacao campos
 
+	wp_send_json($ret, 200);
 
 }
 
@@ -200,10 +200,13 @@ function do_afiliar(){
 	$iniciativa_id = $_POST['iniciativa_id'];
 
 	$afiliados = get_field('afiliados', $iniciativa_id);
-	if(!in_array($user_id, $afiliados)){
+	if(is_array($afiliados)){
 		array_push($afiliados, $user_id);
-		update_field('afiliados', $afiliados, $iniciativa_id);
+
+	}else{
+		$afiliados = array($user_id);
 	}
+	update_field('afiliados', $afiliados, $iniciativa_id);
 
 	$ret->success = true;
 	wp_send_json($ret, 200);
