@@ -100,7 +100,9 @@ $(document).ready(function(){
 		};
 
 		$.post(ajaxurl, data, function(response){
-			console.log(response);
+			if(response.success){
+				location.reload();
+			}
 		});
 	});
 

@@ -74,6 +74,7 @@ function do_cria_abaixo_assinado(){
 		$_POST['id'] = $abaixo_assinado_id;
 		update_field('iniciativa',array($_POST['iniciativa_id']), $abaixo_assinado_id);
 		update_field('descricao', $_POST['conteudo'], $abaixo_assinado_id);
+		update_field('assinantes', array(), $abaixo_assinado_id);
 
 		$_POST['success_message'] = "Abaixo Assinado criado com sucesso";
 		$_POST['success_infos'] = ['permalink' => get_the_permalink($abaixo_assinado_id), 'title' => get_the_title($abaixo_assinado_id)]; 
@@ -231,6 +232,31 @@ function do_afiliar(){
 		$afiliados = array($user_id);
 	}
 	update_field('afiliados', $afiliados, $iniciativa_id);
+
+	$ret->success = true;
+	wp_send_json($ret, 200);
+
+
+}
+
+add_action( 'wp_ajax_do_assinar', 'do_assinar' );
+add_action( 'wp_ajax_nopriv_do_assinar', 'do_assinar' ); // This is for unlogged users.
+function do_assinar(){
+
+	$ret = new StdClass();
+	$ret->success = false;
+
+	$user_id = $_POST['user_id'];
+	$as_id = $_POST['as_id'];
+
+	$assinantes = get_field('assinantes', $as_id);
+	if(is_array($assinantes)){
+		array_push($assinantes, $user_id);
+	}else{
+		$assinantes = array($user_id);
+	}
+
+	update_field('assinantes', $assinantes, $as_id);
 
 	$ret->success = true;
 	wp_send_json($ret, 200);
