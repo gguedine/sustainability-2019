@@ -56,6 +56,30 @@ function do_cadastro(){
 	}//validation if
 }//function
 
+add_action('do_cria_abaixo_assinado', 'do_cria_abaixo_assinado');
+function do_cria_abaixo_assinado(){
+	if(empty($_POST)) return;
+
+	if(
+		isset($_POST['titulo']) && !empty($_POST['titulo']) &&
+		isset($_POST['conteudo']) && !empty($_POST['conteudo']) &&
+		isset($_POST['iniciativa_id']) && !empty($_POST['iniciativa_id'])
+	):
+
+		$abaixo_assinado_id = wp_insert_post([
+			'post_title'=> $_POST['titulo'],
+			'post_type' => 'abaixo_assinado',
+			'post_status'=> 'publish'
+		]);
+		$_POST['id'] = $abaixo_assinado_id;
+		update_field('iniciativa',array($_POST['iniciativa_id']), $abaixo_assinado_id);
+		update_field('descricao', $_POST['conteudo'], $abaixo_assinado_id);
+
+		$_POST['success_message'] = "Abaixo Assinado criado com sucesso";
+		$_POST['success_infos'] = ['permalink' => get_the_permalink($abaixo_assinado_id), 'title' => get_the_title($abaixo_assinado_id)]; 
+
+	endif;
+}
 
 add_action( 'do_cria_evento', 'do_cria_evento');
 function do_cria_evento(){
