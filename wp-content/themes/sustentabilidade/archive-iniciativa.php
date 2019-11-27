@@ -8,9 +8,11 @@
 		?>
 
 				<div class="iniciativa">
-					<a href="<?php the_permalink(); ?>">
+					<h4>
+						<a href="<?php the_permalink(); ?>">
 						<?php the_title(); ?>
-					</a>
+						</a>
+					</h4>
 					<?php the_content(); ?>
 				</div>
 

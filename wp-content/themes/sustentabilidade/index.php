@@ -15,10 +15,10 @@
 
 
 					A sustentabilidade ambiental está muito ligada ao termo desenvolvimento sustentável, que visa à utilização dos produtos do meio ambiente sem destruí-los ou extingui-los, garantindo, simultaneamente, o desenvolvimento financeiro, tecnológico, industrial, etc.
-				</p>
+				</p> \
 
 				<div class="card">
-				  <div class="card-body">
+				  <div class="card-body"> 
 				    <p>A sustentabilidade ambiental está muito ligada ao termo desenvolvimento sustentável, que visa à utilização dos produtos do meio ambiente sem destruí-los ou extingui-los, garantindo, simultaneamente, o desenvolvimento financeiro, tecnológico, industrial, etc. Você pode nos ajudar de diversas formas, seja contribuindo para causa regularmente com doações ou se informando e passando adiante essas informação. Saiba como clicando no botão abaixo.</p>
 				  </div>
 				</div>	
@@ -35,13 +35,21 @@
 			</div> -->
 
 			<button type="button" class="btn btn-success">Saiba Mais</button>
-
-			<!-- <div class="sa-content-4 row">
+			<div class = "section-b">
+				<div class"sa-content">
+					<h5>Depoimentos</h5>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id magna sed ex elementum commodo quis quis libero. Sed a est purus. Duis nec pulvinar tellus. Mauris pellentesque, sem a porttitor dictum, eros velit auctor lacus, lacinia vestibulum neque purus et sapien. 
+					Curabitur et convallis mi. Aliquam erat volutpat. Fusce malesuada pulvinar odio id laoreet. Aenean mattis mollis ante ut scelerisque. Duis erat urna, gravida sit amet varius id, viverra ut nunc. Aenean eu iaculis dolor, at vestibulum ex. Interdum et malesuada fames ac ante ipsum primis in faucibus. 
+					Pellentesque tincidunt accumsan turpis, eu mattis sem rutrum in. Cras luctus, libero sed dignissim pretium, nisl leo faucibus lorem, in pulvinar odio lacus ac nisl. Sed sagittis dui a suscipit sollicitudin. Curabitur vitae erat in nunc posuere posuere non non arcu. Duis facilisis odio sed dolor sagittis convallis.
+					</p>
+				</div>
+			</div>
+			<!-- <div class="sa-content">
 				<div class="col-sm">								
 					<div class="card" style="width: 100%;">
 					  <img class="card-img-top" src="https://pixel.nymag.com/imgs/fashion/daily/2019/06/18/18-puppy-dog-eyes.w700.h700.jpg" alt="Imagem de capa do card">
 					  <div class="card-body">
-					    <h5 class="card-title">Título do card</h5>
+					    <h5 class="card-title">Depoimentos</h5>
 					    <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
 					    <a href="#" class="btn btn-primary">Visitar</a>
 					  </div>
@@ -107,7 +115,14 @@
 			  	echo '</div>';
 			endif;
 			?>  
-		</div>	
+		</div>
+		<div class="section-c">
+			<div class"sa-content">
+				<h3>Patrocinadores</h3>
+				<p>Maecenas malesuada vel neque nec interdum. In hac habitasse platea dictumst. Phasellus sit amet orci commodo mauris mattis porta. Suspendisse fermentum eu nisl nec porttitor. Nunc urna felis, dapibus at convallis ut, pellentesque ac ante. Fusce sed fringilla purus. Proin bibendum convallis dui, non molestie est suscipit sit amet.
+				</p>
+			</div>
+		</div>
 	  </div>
 	</div>
 
