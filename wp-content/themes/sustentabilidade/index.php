@@ -118,9 +118,16 @@
 		</div>
 		<div class="section-c">
 			<div class"sa-content">
-				<h3>Patrocinadores</h3>
-				<p>Maecenas malesuada vel neque nec interdum. In hac habitasse platea dictumst. Phasellus sit amet orci commodo mauris mattis porta. Suspendisse fermentum eu nisl nec porttitor. Nunc urna felis, dapibus at convallis ut, pellentesque ac ante. Fusce sed fringilla purus. Proin bibendum convallis dui, non molestie est suscipit sit amet.
-				</p>
+			<h3>Patrocinadores</h3>
+				<div class="col-sm-6 col-md-4">
+					<img class="sa-img-5" src="<?php echo get_template_directory_uri(); ?>/images/patro_img1.jpg>
+				</div>
+				<div class="col-sm-6 col-md-4">
+					<img class="sa-img-5" src="<?php echo get_template_directory_uri(); ?>/images/patro_img2.jpg>
+				</div>
+				<div class="col-sm-6 col-md-4">
+					<img class="sa-img-5" src="<?php echo get_template_directory_uri(); ?>/images/patro_img3.jpg>
+				</div>
 			</div>
 		</div>
 	  </div>
