@@ -35,9 +35,9 @@
 			</div> -->
 
 			<button type="button" class="btn btn-success">Saiba Mais</button>
-			<div class = "section-b">
-				<div class"sa-content">
-					<h5>Depoimentos</h5>
+			<div class="section-b">
+				<div class="sa-content-5">
+					<h3>Depoimentos</h3>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id magna sed ex elementum commodo quis quis libero. Sed a est purus. Duis nec pulvinar tellus. Mauris pellentesque, sem a porttitor dictum, eros velit auctor lacus, lacinia vestibulum neque purus et sapien. 
 					Curabitur et convallis mi. Aliquam erat volutpat. Fusce malesuada pulvinar odio id laoreet. Aenean mattis mollis ante ut scelerisque. Duis erat urna, gravida sit amet varius id, viverra ut nunc. Aenean eu iaculis dolor, at vestibulum ex. Interdum et malesuada fames ac ante ipsum primis in faucibus. 
 					Pellentesque tincidunt accumsan turpis, eu mattis sem rutrum in. Cras luctus, libero sed dignissim pretium, nisl leo faucibus lorem, in pulvinar odio lacus ac nisl. Sed sagittis dui a suscipit sollicitudin. Curabitur vitae erat in nunc posuere posuere non non arcu. Duis facilisis odio sed dolor sagittis convallis.
@@ -117,7 +117,7 @@
 			?>  
 		</div>
 		<div class="section-c">
-			<div class"sa-content">
+			<div class="sa-content-5">
 			<h3>Patrocinadores</h3>
 				<div class="col-sm-6 col-md-4">
 					<img class="sa-img-5" src="<?php echo get_template_directory_uri(); ?>/images/patro_img1.jpg">
