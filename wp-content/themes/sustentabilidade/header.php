@@ -30,6 +30,7 @@
           <li class="nav-item"><a class="nav-link" id="itens-header" href="<?php echo get_post_type_archive_link('especie'); ?>">Espécies</a></li>
           <li class="nav-item"><a class="nav-link" id="itens-header" href="<?php echo get_post_type_archive_link('evento'); ?>">Eventos</a></li>
           <li class="nav-item"><a class="nav-link" id="itens-header" href="<?php echo get_post_type_archive_link('iniciativa'); ?>">Iniciativas</a></li>
+          <li class="nav-item"><a class="nav-link" id="itens-header" href="<?php echo get_post_type_archive_link('noticia'); ?>">Blog</a></li>
           <!-- <li class="nav-item "><a class="nav-link" id="itens-header" href="#">About</a></li> -->
         <li>
         	<?php //get_search_form(); ?>
