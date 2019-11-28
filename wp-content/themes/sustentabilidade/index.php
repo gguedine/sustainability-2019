@@ -120,13 +120,13 @@
 			<div class"sa-content">
 			<h3>Patrocinadores</h3>
 				<div class="col-sm-6 col-md-4">
-					<img class="sa-img-5" src="<?php echo get_template_directory_uri(); ?>/images/patro_img1.jpg>
+					<img class="sa-img-5" src="<?php echo get_template_directory_uri(); ?>/images/patro_img1.jpg">
 				</div>
 				<div class="col-sm-6 col-md-4">
-					<img class="sa-img-5" src="<?php echo get_template_directory_uri(); ?>/images/patro_img2.jpg>
+					<img class="sa-img-5" src="<?php echo get_template_directory_uri(); ?>/images/patro_img2.jpg">
 				</div>
 				<div class="col-sm-6 col-md-4">
-					<img class="sa-img-5" src="<?php echo get_template_directory_uri(); ?>/images/patro_img3.jpg>
+					<img class="sa-img-5" src="<?php echo get_template_directory_uri(); ?>/images/patro_img3.jpg">
 				</div>
 			</div>
 		</div>
